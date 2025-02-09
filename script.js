@@ -1,5 +1,5 @@
 // Música
-const musicaFondo = new Audio("sounds/mus_house1.ogg");
+const musicaFondo = new Audio("/sounds/mus_house1.ogg");
 musicaFondo.loop = true; // Bucle 
 musicaFondo.volume = 0.3;
 
