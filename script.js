@@ -3,16 +3,6 @@ const musicaFondo = new Audio("sounds/mus_house1.ogg");
 musicaFondo.loop = true; // Bucle 
 musicaFondo.volume = 0.3;
 
-// Esperar a que el usuario haga clic para reproducir la música
-const btnPlayMusic = document.getElementById("btn_play_music");
-
-btnPlayMusic.addEventListener("click", () => {
-    musicaFondo.play().catch(error => {
-        console.log("Autoplay bloqueado, iniciar con interacción del usuario.");
-    });
-    btnPlayMusic.style.display = "none"; // Ocultar el botón después de iniciar la música
-});
-
 window.addEventListener("load", () => {
     musicaFondo.play().catch(error => {
         console.log("Autoplay bloqueado, iniciar con interacción del usuario.");
