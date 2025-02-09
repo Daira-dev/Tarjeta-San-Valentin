@@ -1,14 +1,3 @@
-// Música
-const musicaFondo = new Audio("sounds/mus_house1.ogg");
-musicaFondo.loop = true; // Bucle 
-musicaFondo.volume = 0.3;
-
-window.addEventListener("load", () => {
-    musicaFondo.play().catch(error => {
-        console.log("Autoplay bloqueado, iniciar con interacción del usuario.");
-    });
-});
-
 // Inicializar el audio
 const musicaFondo = new Audio("sounds/mus_house1.ogg");
 musicaFondo.loop = true; // Bucle 
@@ -22,6 +11,12 @@ btnPlayMusic.addEventListener("click", () => {
         console.log("Autoplay bloqueado, iniciar con interacción del usuario.");
     });
     btnPlayMusic.style.display = "none"; // Ocultar el botón después de iniciar la música
+});
+
+window.addEventListener("load", () => {
+    musicaFondo.play().catch(error => {
+        console.log("Autoplay bloqueado, iniciar con interacción del usuario.");
+    });
 });
 
 
