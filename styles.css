@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cedaff;
+    overflow: hidden;
+}
+
+
+/* Fondo centrado */
+#fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+#fondo img {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: block;
+}
+
+/* Carta centrada sobre el fondo */
+#carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+#carta img {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: block;
+}
+
+/* Efecto al hacer clic */
+#carta:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+
+
+/* Botones */
+.boton {
+    position: absolute;
+    max-width: 3%;
+    min-width: 3%;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    display: none;
+}
+
+#btn_si {
+    top: 53%;
+    left: 47%;
+}
+
+#btn_no {
+    top: 53%;
+    left: 51%;
+}
+
+/* Efecto de clic */
+.boton:active {
+    transform: scale(0.9);
+}
+
+
+/* Fondo oscuro al aparecer el error */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    z-index: 3;
+    display: none; /* Oculto por defecto */
+}
+
+/* Ventana emergente */
+#ventana_error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 4;
+    display: none; /* Oculto por defecto */
+}
+
+/* Imagen de error */
+#img_error {
+    max-width: 80vw;  /* Tamaño relativo a la pantalla */
+    max-height: 80vh;
+}
+
+/* Ventana de aceptación centrada correctamente */
+#ventana_adv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    display: none;
+    text-align: center;
+}
+
+/* Imagen dentro de la ventana */
+#img_adv {
+    max-width: 80vw;  /* Tamaño relativo a la pantalla */
+    max-height: 80vh;
+}
+
+/* Botón de cerrar */
+#btn_cerrar {
+    position: absolute;
+    top: 70%;
+    right: 38%;
+    max-width: 20%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#btn_cerrar_adv {
+    position: absolute;
+    top: 100%;
+    right: 40%;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto de clic */
+#btn_cerrar:active, #btn_cerrar_adv:active {
+    transform: scale(0.9);
+}
